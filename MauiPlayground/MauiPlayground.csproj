@@ -63,4 +63,17 @@
 		<PackageReference Include="Prism.DryIoc.Maui" Version="9.0.401-pre" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\MainPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
 </Project>
