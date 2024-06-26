@@ -24,6 +24,8 @@ public class MainPageViewModel : BindableBase
 
     private void OnCountCommandExecuted()
     {
+        Console.WriteLine("OnCountCommandExecuted()");
+
         _count++;
         if (_count == 1)
             Text = "Clicked 1 time";
