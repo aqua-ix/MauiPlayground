@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="{Binding Title}"
-             x:Class="MauiPlayground.Views.MainPage">
+             x:Class="MauiPlayground.Views.ThirdPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -15,13 +15,13 @@
                 SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
-                Text="Hello, World!"
+                Text="Third Page!"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Button Text="{Binding Text}"
-                    SemanticProperties.Hint="NavigateToNextPage"
-                    Command="{Binding NavigateToNextPage}"
+                    SemanticProperties.Hint="NavigateToMainPage"
+                    Command="{Binding NavigateToMainPage}"
                     HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>

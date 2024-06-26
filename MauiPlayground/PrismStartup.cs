@@ -14,6 +14,8 @@ namespace MauiPlayground
         {
             containerRegistry.RegisterForNavigation<MainPage>()
                 .RegisterInstance(SemanticScreenReader.Default);
+            containerRegistry.RegisterForNavigation<SecondPage>();
+            containerRegistry.RegisterForNavigation<ThirdPage>();
         }
     }
 }

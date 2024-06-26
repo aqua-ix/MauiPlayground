@@ -9,7 +9,7 @@
 
         protected override bool OnBackButtonPressed()
         {
-            Console.WriteLine("OnBackButtonPressed()");
+            Console.WriteLine("[MainPage] OnBackButtonPressed()");
             return false;
         }
     }
