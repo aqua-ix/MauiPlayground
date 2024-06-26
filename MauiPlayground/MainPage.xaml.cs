@@ -20,6 +20,12 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Console.WriteLine("OnBackButtonPressed()");
+            return false;
+        }
     }
 
 }
