@@ -1,20 +1,20 @@
 ﻿namespace MauiPlayground
 {
-    public partial class MainPage : ContentPage
+    public partial class SecondPage : ContentPage
     {
-        public MainPage()
+        public SecondPage()
         {
             InitializeComponent();
         }
 
         private async void OnButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SecondPage());
+            await Navigation.PopToRootAsync();
         }
 
         protected override bool OnBackButtonPressed()
         {
-            Console.WriteLine("[MainPage] OnBackButtonPressed()");
+            Console.WriteLine("[SecondPage] OnBackButtonPressed()");
             return false;
         }
     }
