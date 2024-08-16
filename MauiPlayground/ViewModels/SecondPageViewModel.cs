@@ -1,6 +1,6 @@
 ﻿namespace MauiPlayground.ViewModels;
 
-public class SecondPageViewModel : BindableBase
+public class SecondPageViewModel : BaseViewModel
 {
     private ISemanticScreenReader _screenReader { get; }
     private INavigationService _navigationService { get; }
@@ -27,6 +27,7 @@ public class SecondPageViewModel : BindableBase
     private void OnCommandExecuted()
     {
         Console.WriteLine("[SecondPage] OnCommandExecuted()");
+        IsNavigateButtonPressed = true;
         _navigationService.NavigateAsync("ThirdPage");
     }
 }

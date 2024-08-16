@@ -1,6 +1,6 @@
 ﻿namespace MauiPlayground.ViewModels;
 
-public class ThirdPageViewModel : BindableBase
+public class ThirdPageViewModel : BaseViewModel
 {
     private ISemanticScreenReader _screenReader { get; }
     private INavigationService _navigationService { get; }
@@ -16,6 +16,7 @@ public class ThirdPageViewModel : BindableBase
     public string Title => "Third Page";
 
     private string _text = "Go back to Main Page";
+
     public string Text
     {
         get => _text;
@@ -27,6 +28,7 @@ public class ThirdPageViewModel : BindableBase
     private void OnCommandExecuted()
     {
         Console.WriteLine("[ThirdPage] OnCommandExecuted()");
+        IsNavigateButtonPressed = true;
         _navigationService.NavigateAsync("/NavigationPage/MainPage");
     }
 }
