@@ -14,6 +14,12 @@ namespace MauiPlayground
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                })
+                .ConfigureMauiHandlers(handlers =>
+                {
+#if __ANDROID__
+                    handlers.AddHandler<Toolbar, CustomToolbarHandler>();
+#endif
                 });
 
 #if DEBUG
