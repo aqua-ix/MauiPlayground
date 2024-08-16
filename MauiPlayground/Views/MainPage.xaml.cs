@@ -1,6 +1,8 @@
-﻿namespace MauiPlayground.Views
+﻿using MauiPlayground.ViewModels;
+
+namespace MauiPlayground.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage, INavigateUpHandler
     {
         public MainPage()
         {
@@ -12,6 +14,14 @@
             Console.WriteLine("[MainPage] OnBackButtonPressed()");
             return false;
         }
-    }
 
+        public void OnNavigateUpButtonPressed()
+        {
+            Console.WriteLine("[MainPage] OnNavigateUpButtonPressed()");
+            if (BindingContext is BaseViewModel viewModel)
+            {
+                viewModel.IsNavigateUpButtonPressed = true;
+            }
+        }
+    }
 }

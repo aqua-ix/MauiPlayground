@@ -1,21 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MauiPlayground.ViewModels;
 
 namespace MauiPlayground.Views;
 
-public partial class SecondPage : ContentPage
+public partial class SecondPage : ContentPage, INavigateUpHandler
 {
     public SecondPage()
     {
         InitializeComponent();
     }
-    
+
     protected override bool OnBackButtonPressed()
     {
         Console.WriteLine("[SecondPage] OnBackButtonPressed()");
         return false;
+    }
+
+    public void OnNavigateUpButtonPressed()
+    {
+        Console.WriteLine("[SecondPage] OnNavigateUpButtonPressed()");
+        if (BindingContext is BaseViewModel viewModel)
+        {
+            viewModel.IsNavigateUpButtonPressed = true;
+        }
     }
 }
