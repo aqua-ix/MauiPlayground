@@ -23,6 +23,11 @@
                     SemanticProperties.Hint="NavigateToNextPage"
                     Command="{Binding NavigateToNextPage}"
                     HorizontalOptions="Center" />
+            <Button
+                Text="{Binding CloseAppText}"
+                SemanticProperties.Hint="CloseApp"
+                Command="{Binding CloseApp}"
+                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 

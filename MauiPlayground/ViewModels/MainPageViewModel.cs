@@ -11,6 +11,7 @@ public class MainPageViewModel : BindableBase
         _screenReader = screenReader;
         _navigationService = navigationService;
         NavigateToNextPage = new DelegateCommand(OnCommandExecuted);
+        CloseApp = new DelegateCommand(OnCloseAppCommandExecuted);
     }
 
     public string Title => "Main Page";
@@ -21,6 +22,13 @@ public class MainPageViewModel : BindableBase
         get => _text;
         set => SetProperty(ref _text, value);
     }
+    
+    private string _closeAppText = "Close App";
+    public string CloseAppText
+    {
+        get => _closeAppText;
+        set => SetProperty(ref _closeAppText, value);
+    }
 
     public DelegateCommand NavigateToNextPage { get; }
 
@@ -28,5 +36,15 @@ public class MainPageViewModel : BindableBase
     {
         Console.WriteLine("[MainPage] OnCommandExecuted()");
         _navigationService.NavigateAsync("SecondPage");
+    }
+
+    public DelegateCommand CloseApp { get; }
+
+    private void OnCloseAppCommandExecuted()
+    {
+        Console.WriteLine("[MainPage] CloseApp()");
+#if ANDROID
+        Platform.CurrentActivity?.Finish();
+#endif
     }
 }
