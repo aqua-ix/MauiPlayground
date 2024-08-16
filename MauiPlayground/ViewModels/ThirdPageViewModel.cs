@@ -15,7 +15,7 @@ public class ThirdPageViewModel : BindableBase
 
     public string Title => "Third Page";
 
-    private string _text = "Go back to Main Page";
+    private string _text = "Close App";
     public string Text
     {
         get => _text;
@@ -27,6 +27,8 @@ public class ThirdPageViewModel : BindableBase
     private void OnCommandExecuted()
     {
         Console.WriteLine("[ThirdPage] OnCommandExecuted()");
-        _navigationService.NavigateAsync("/NavigationPage/MainPage");
+#if ANDROID
+        Platform.CurrentActivity?.Finish();
+#endif
     }
 }
