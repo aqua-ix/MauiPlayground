@@ -12,5 +12,11 @@ namespace MauiPlayground
         }
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        
+        public override void OnCreate()
+        {
+            Console.WriteLine("[MainApplication] OnCreate");
+            base.OnCreate();
+        }
     }
 }
