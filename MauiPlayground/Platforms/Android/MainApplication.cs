@@ -15,8 +15,9 @@ namespace MauiPlayground
         
         public override void OnCreate()
         {
-            Console.WriteLine("[MainApplication] OnCreate");
+            Console.WriteLine("[MainApplication] OnCreate start");
             base.OnCreate();
+            Console.WriteLine("[MainApplication] OnCreate end");
         }
     }
 }
