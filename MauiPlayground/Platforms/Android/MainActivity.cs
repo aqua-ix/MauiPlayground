@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace MauiPlayground
 {
-    [Activity(Name = "com.companyname.mauiplayground.MainActivity",
+    [Activity(Name = "com.example.app.MainActivity",
         Theme = "@style/Maui.SplashTheme",
         Exported = true,
         LaunchMode = LaunchMode.SingleTop,

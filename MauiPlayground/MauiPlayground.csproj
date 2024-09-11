@@ -24,7 +24,7 @@
 		<ApplicationTitle>MauiPlayground</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauiplayground</ApplicationId>
+		<ApplicationId>com.example.app</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
